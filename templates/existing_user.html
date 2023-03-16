@@ -1,0 +1,495 @@
+<!-- Existing User -->
+
+<!--<h1>Hello {{row['nickname'][0]}}!</h1>-->
+
+<!--<p>You planned your day on {{row['morning_entry_qty_month'][0]}} mornings this month! You reflected on the day {{row['evening_entry_qty_month'][0]}} evenings this month!</p>-->
+<!--<img style=" max-width: 40%; max-height: 40%;" src="static/failing_to_plan.jpeg" alt='"If you are failing to plan, you are planning to fail."-Benjamin Franklin'>-->
+
+<!--<br>-->
+<!--<br>-->
+<!--<form method="POST" action="/create-customer-portal-session">-->
+<!--    <button>Manage billing</button>-->
+<!--</form>-->
+<!--<button><a href={{doc_link}}>Your Journal</a></button>-->
+
+<!--<br><br>-->
+<!--<button><a href="/logout">logout</a></button>-->
+<!--<style>-->
+<!--    pre {visibility:hidden;}-->
+<!--    h1 {color:blue;}-->
+<!--    p {font-size: 20px;}-->
+<!--    button {font-size: 35px;}-->
+<!--</style>-->
+
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://appco.themetags.com/faq.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta description -->
+    <meta name="description" content="Benji Text Message Journal">
+    <meta name="author" content="ThemeTags">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content=""> <!-- website name -->
+    <meta property="og:site" content=""> <!-- website link -->
+    <meta property="og:title" content=""> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content=""> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content=""> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content=""> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article">
+
+    <!--title-->
+    <title>Benji Text Message Journal</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/5540/premium/5540356.png?token=exp=1658850119~hmac=b4895213341b05595c76fc2a3e17b9b0" type="image/png" sizes="16x16">
+
+    <!--google fonts-->
+    <link href="static/css" rel="stylesheet">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <!--Magnific popup css-->
+    <link rel="stylesheet" href="static/magnific-popup.css">
+    <!--Themify icon css-->
+    <link rel="stylesheet" href="static/themify-icons.css">
+    <!--animated css-->
+    <link rel="stylesheet" href="static/animate.min.css">
+
+    <!--Owl carousel css-->
+    <link rel="stylesheet" href="static/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/owl.theme.default.min.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="static/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" href="static/responsive.css">
+
+    <style>
+    /* toggle button */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        input:checked + .slider {
+          background-color: #234452;
+        }
+        input:focus + .slider {
+          box-shadow: 0 0 1px #234452;
+        }
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        .slider.round:before {
+          border-radius: 50%;
+        }
+
+
+
+        /*form*/
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 45%;
+        }
+
+        /* Styling form-control Radio
+        button */
+        .form-control input[type="radio"] {
+            display: inline-block;
+            width: auto;
+        }
+
+
+/* Styling Button */
+        button {
+            background-color: #CCCCCC;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            color: #fff;
+            font-size: 21px;
+            width: 40%
+            margin-top: 50px;
+            margin-bottom: 20px;
+            text-align:center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Styling Button */
+        .save_changes {
+            background-color: #234452;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            color: #fff;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+    </style>
+
+</head>
+<body>
+
+<!--header section start-->
+<header style="background-color: #DEEAF3; height: 50px; text-align: center;">
+    <!--start navbar-->
+    <!-- <nav background-color: #002636 !important; opacity: 1.0 !important; class="navbar navbar-expand-lg fixed-top bg-transparent"> -->
+
+        <div style="display: flex; justify-content: space-between;">
+            <a style="margin-left: 80px" class="navbar-brand" href="https://www.journaljar.io"><img src="static/logo.png" width="35%" alt="logo" class="img-fluid"></a>
+            <a href="https://www.journaljar.io" style="color:#002636;font-family: 'Montserrat', sans-serif; margin-right:80px; font-weight: 700!important;font-size: 1.3rem;">Logout</a>
+        </div>
+    <!-- </nav> -->
+    <!--end navbar-->
+</header>
+<!--header section end-->
+
+<!--body content wrap start-->
+<div class="main">
+
+    <!--hero section start-->
+    <!-- <section class="hero-section ptb-100 background-img" style="background: url(&#39;img/hero-bg-1.jpg&#39;)no-repeat center center / cover"> -->
+      <!-- <section class="hero-section ptb-100 background-img" style="background: #DEEAF3 no-repeat center center / cover"></section>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-9 col-lg-7">
+                    <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
+                        <h1 class="text-white mb-0" style="line-height:0.9em;">Portal</h1> -->
+                        <!-- <p class="lead">
+                            You have __ __ times this month.
+                        </p> -->
+                    <!-- </div>
+                </div>
+            </div>
+        </div> -->
+      <header style="background-color: #DEEAF3; height: 250px; text-align: center;">
+        <h1 style="color: #002636; margin: 0; padding-top: 40px;">Portal</h1>
+      </header>
+    </section>
+    <!--hero section end-->
+    
+    
+
+    <!--promo section start-->
+    <section class="promo-section ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-9">
+                    <div class="section-heading mb-5">
+                        <h2>Hello {{row['nickname'][0]}}!</h2>
+                        <p class="lead">
+                            {{streak_msg}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button><a href={{doc_link}} style="color:black;text-align:center">View Your Journal</a></button>
+        <br><br>
+
+        <form action="/portal" method="POST" onkeypress="return event.keyCode != 13">
+            <h4 style="display: block;text-align:center; padding: 0px 20px;">Settings</h4>
+            <br>
+
+            <p class="lead" style="display: inline;text-align:center">Custom Morning Prompt (Optional)</p>
+            <input type="text" class="form-control" name="mq_prompt" id="mq_prompt" placeholder="{{mq_prompt}}">
+            <p class="lead" style="display: inline;text-align:center">Morning Prompt Time</p>
+            <select class="form-control" name="mq_time" id="mq_time">
+              <option value={{mq_time}} selected disabled hidden>{{mq_time}}</option>
+              <option value="04:00">04:00</option>
+              <option value="04:30">04:30</option>
+              <option value="05:00">05:00</option>
+              <option value="05:30">05:30</option>
+              <option value="06:00">06:00</option>
+              <option value="06:30">06:30</option>
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+            </select>
+            <p class="lead" style="display: inline;">Toggle Morning Prompt</p>
+            <br>
+            <label class="switch" style="text-align:center">
+              <input type="checkbox" {{mq_toggle}} id="mq_toggle_flag" name="mq_toggle_flag" style="text-align:center">
+              <span class="slider round"></span>
+            </label>
+            <br><br><br>
+
+            <p class="lead" style="display: inline;text-align:center">Custom Evening Prompt (Optional)</p>
+            <input type="text" class="form-control" name="eq_prompt" id="eq_prompt" placeholder="{{eq_prompt}}">
+            <p class="lead" style="display: inline;text-align:center">Evening Prompt Time</p>
+            <select class="form-control" name="eq_time" id="eq_time">
+              <!--<option value={{eq_time}} selected disabled hidden>{{eq_time}}</option>-->
+              <!--<option value="16:00">04:00 PM</option>-->
+              <!--<option value="16:30">04:30 PM</option>-->
+              <!--<option value="17:00">05:00 PM</option>-->
+              <!--<option value="17:30">05:30 PM</option>-->
+              <!--<option value="18:00">06:00 PM</option>-->
+              <!--<option value="18:30">06:30 PM</option>-->
+              <!--<option value="19:00">07:00 PM</option>-->
+              <!--<option value="19:30">07:30 PM</option>-->
+              <!--<option value="20:00">08:00 PM</option>-->
+              <!--<option value="20:30">08:30 PM</option>-->
+              <!--<option value="21:00">09:00 PM</option>-->
+              <!--<option value="21:30">09:30 PM</option>-->
+              <!--<option value="22:00">10:00 PM</option>-->
+              <!--<option value="22:30">10:30 PM</option>-->
+              <!--<option value="23:00">11:00 PM</option>-->
+              <!--<option value="23:30">11:30 PM</option>-->
+              <option value={{eq_time}} selected disabled hidden>{{eq_time}}</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+              <option value="22:30">22:30</option>
+              <option value="23:00">23:00</option>
+              <option value="23:30">23:30</option>
+            </select>
+            <p class="lead" style="display: inline;">Toggle Evening Prompt</p>
+            <br>
+            <label class="switch" style="text-align:center">
+              <input type="checkbox" {{eq_toggle}} id="eq_toggle_flag" name="eq_toggle_flag" style="text-align:center">
+              <span class="slider round"></span>
+            </label>
+            <br><br><br>
+
+            <!-- <p class="lead" style="display: inline;text-align:center">Sunday Weekly Prompt</p>
+            <input type="text" class="form-control" name="wq_prompt" id="wq_prompt" placeholder="{{wq_prompt}}">
+            <p class="lead" style="display: inline;text-align:center">Sunday Weekly Prompt Time</p>
+            <select class="form-control" name="wq_time" id="wq_time">
+              <option value={{wq_time}} selected disabled hidden>{{wq_time}}</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <p class="lead" style="display: inline;">Toggle Sunday Weekly Prompt</p>
+            <br>
+            <label class="switch" style="text-align:center">
+              <input type="checkbox" {{wq_toggle}} id="wq_toggle_flag" name="wq_toggle_flag" style="text-align:center">
+              <span class="slider round"></span>
+            </label>
+            <br><br><br> -->
+
+            <p class="lead" style="display: inline;text-align:center">Time Zone</p>
+            <select class="form-control" name="time_zone" id="time_zone">
+              <option value={{time_zone}} selected disabled hidden>{{time_zone}}</option>
+              <option value="US/Central">US/Central</option>
+              <option value="US/Central">US/Eastern</option>
+              <option value="US/Hawaii">US/Hawaii</option>
+              <option value="US/Mountain">US/Mountain</option>
+              <option value="US/Pacific">US/Eastern</option>
+            </select>
+
+
+
+            <p class="lead" style="display: inline;">Master Switch <small>(Turn Off/On all Prompts)</small> </p>
+            <br>
+            <label class="switch" style="text-align:center">
+              <input type="checkbox" {{account_active_toggle}} id="account_active" name="account_active" style="text-align:center">
+              <span class="slider round"></span>
+            </label>
+
+            <input class="save_changes" type="submit" id="submit" value="Save Changes">
+        </form>
+
+
+    <!--<section class="gray-light-bg ptb-100">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row justify-content-center">-->
+    <!--            <div class="col-md-9 col-lg-8">-->
+    <!--                <div class="section-heading mb-5 text-center">-->
+    <!--                    <h2>Frequently Asked Questions</h2>-->
+    <!--                    <p class="lead">-->
+    <!--                        Quickly morph client-centric results through performance based applications. Proactively facilitate professional human capital for cutting-edge.-->
+    <!--                    </p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>How can I pay for this?</h5>-->
+    <!--                    <p>Intrinsicly implement high standards in strategic theme areas via inexpensive solutions.-->
+    <!--                        Assertively conceptualize prospective bandwidth whereas client-based imperatives.</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>Is it possible to pay yearly?</h5>-->
+    <!--                    <p>Assertively iterate user friendly innovation without open-source markets. Monotonectally extend-->
+    <!--                        resource sucking manufactured products without high-payoff paradigms. Objectively customize-->
+    <!--                        ubiquitous information before economically sound relationships. </p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>Do you offer discounts on multiple items?</h5>-->
+    <!--                    <p>Dramatically target focused testing procedures after holistic ideas. Collaboratively maximize-->
+    <!--                        high-payoff ROI and value-added products. Distinctively deliver cooperative collaboration and-->
+    <!--                        idea-sharing whereas customized</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>Is VAT included in plan prices?</h5>-->
+    <!--                    <p>Distinctively simplify high-quality initiatives for highly efficient applications. Monotonectally-->
+    <!--                        repurpose integrated customer service after magnetic e-services. </p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>Will I pay more for some features?</h5>-->
+    <!--                    <p>Enthusiastically pontificate resource-leveling supply chains whereas scalable markets.-->
+    <!--                        Authoritatively streamline resource maximizing methods of empowerment</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-6">-->
+    <!--                <div class="single-faq">-->
+    <!--                    <h5>Why are there no limits on the number of messages?</h5>-->
+    <!--                    <p>Assertively target turnkey ideas for market-driven portals. Appropriately e-enable world-class-->
+    <!--                        intellectual capital whereas 2.0 mindshare.</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section> -->
+
+
+</div>
+<!--body content wrap end-->
+
+
+<!--jQuery-->
+<script src="static/jquery-3.5.0.min.js"></script>
+<!--Popper js-->
+<script src="static/popper.min.js"></script>
+<!--Bootstrap js-->
+<script src="static/bootstrap.min.js"></script>
+<!--Magnific popup js-->
+<script src="static/jquery.magnific-popup.min.js"></script>
+<!--jquery easing js-->
+<script src="static/jquery.easing.min.js"></script>
+
+<!--wow js-->
+<script src="static/wow.min.js"></script>
+<!--owl carousel js-->
+<script src="static/owl.carousel.min.js"></script>
+<!--countdown js-->
+<script src="static/jquery.countdown.min.js"></script>
+<!--custom js-->
+<script src="static/scripts.js"></script>
+
+</body></html>

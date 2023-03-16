@@ -1,0 +1,30 @@
+<!-- New User -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+<body>
+    <h1>Hello New User</h1>
+
+    <form  action="/create-checkout-session" method="POST">
+    <label>Nickname:<input type="text" name="nickname" required></label>
+    <br>
+    <label>Phone Number:<input type="number" name="phone" required></label>
+    <br>
+
+    <!-- Add a hidden field with the lookup_key of your Price (Stripe) -->
+    <input type="hidden" name="lookup_key" value="Benji" />
+
+    <button type="submit">Continue to Billing</button>
+    </form>
+
+
+    <br><br>
+    <button><a href="/logout">logout</a></button>
+</body>
+    <style>
+        pre {visibility:hidden;}
+        h1 {color:blue;}
+    </style>
